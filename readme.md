@@ -17,3 +17,5 @@ Stages UY1 Néo Quanticiens 2022
 
 * Cours d'Introduction à la programmation python pour la biologie (bioformatique) de l'Université de Paris Cité (Aout 2022)
 
+* Trucs et astuces d'installation de la distribution miniconda/anaconda
+
