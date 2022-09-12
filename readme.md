@@ -1,5 +1,4 @@
-# UY1_NeoQ2022
-Stages UY1 Néo Quanticiens 2022
+# UY1_NeoQ2022 - Stuff and Tricks
 
 * Objectifs et mini-projets des stages ([UY1_NeoQ2022.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/UY1_NeoQ2022.pdf))
 
