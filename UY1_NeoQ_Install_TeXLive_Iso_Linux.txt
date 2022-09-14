@@ -101,6 +101,10 @@ affiche le message d'erreur " tlmgr: command not found", alors entrer
 
 $ sudo env PATH="$PATH" tlmgr --gui
 
+13. Pour liberer l'espace occupé par les fichiers qui s'accumulent dans le backup à la suite de diverses installations et mises à jour
+$ tlmgr backup --clean=0 --all
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Désintallation texlive2022 iso
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

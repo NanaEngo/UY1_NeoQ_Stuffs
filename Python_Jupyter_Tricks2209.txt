@@ -26,6 +26,8 @@ $(base) mamba install jupyterlab ipykernel nb_conda_kernels
 This would install jupyterlab and jupyter notebook. My advice is to use jupyterlab which is modern and powerfull. 
 "ipykernel" is necessary to the use of one jupyter (lab or notebook) with various kernels or environments 
 
+3. Clean the local package cache in order to free space
+$(base) mamba clean --all
 
 II. CHANGING WORKING DIRECTORY UNDER LINUX
 
