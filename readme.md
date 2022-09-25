@@ -14,6 +14,7 @@
 
 * [TeXLive_Trick](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks)
   * Comment installer TexLive sur Linux ([UY1_NeoQ_Install_TeXLive_Linux.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/UY1_NeoQ_Install_TeXLive_Linux.txt))
+  * Exemple de fichier **profile** à utiliser lors d'une installation en mode commande ([MyTL2022Linux.profile](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/MyTL2022Linux.profile.txt)) 
 
 * [Research_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks)
   * Rudiments de la méthodologie de la Recherche ([UY1_NeoQ_Methodologie_de_RechercheV211213.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks/UY1_NeoQ_Beamer_Methodologie_de_RechercheV211213.pdf))
@@ -23,3 +24,4 @@
   * Cours UN et UMra mis à jour pour le renforcement des capacités ([Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)) 
 
 * [Linux_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Linux_Tricks)
+ * [Commandes de base de LINUX V2209](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Linux_Tricks)
