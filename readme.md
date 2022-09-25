@@ -24,4 +24,4 @@
   * Cours UN et UMra mis à jour pour le renforcement des capacités ([Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)) 
 
 * [Linux_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Linux_Tricks)
- * [Commandes de base de LINUX V2209](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Linux_Tricks)
+ * [Commandes de base de LINUX V2209](https://docs.google.com/document/d/1_m6KMBfJAMpmk-HUIWPnT6nt-koY4LJuLGYVyQ4f02g/edit)
