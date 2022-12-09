@@ -19,7 +19,7 @@
 * [Research_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks)
   * Rudiments de la méthodologie de la Recherche ([UY1_NeoQ_Methodologie_de_RechercheV211213.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks/UY1_NeoQ_Beamer_Methodologie_de_RechercheV211213.pdf))
   * Principales composantes d'un projet de Recherche ([UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf))
-  * Guidelines for Writing Research Proposals and Dissertations ([UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Dissertation Guide.pdf))
+  * Guidelines for Writing Research Proposals and Dissertations ([Dissertation Guide.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/))
 
 
 * [Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Atomic_Physics)
