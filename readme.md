@@ -7,7 +7,7 @@
   * Installer des packages python sur son compte colab de facon permanente ([UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.txt](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.txt))
   * Cours d'Introduction à la programmation python pour la biologie (bioformatique) de l'Université de Paris Cité (Aout 2022) ([Python Cours Complet 2022](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Python_Tricks/Python%20Cours%20Complet%20V2022.pdf))
   * Trucs et astuces d'installation de la distribution miniconda/anaconda ([Python_Jupyter_Tricks2209.txt](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/Python_Jupyter_Tricks2209.txt))
-  * [Premiers pas vers la programmation Python](https://www.youtube.com/watch?v=nAyi6EbWwxU)
+  * [Premiers pas vers la programmation Python](https://www.youtube.com/watch?v=nAyi6EbWwxU) sur la chaine YouTube du Groupe [UY1 Quantum](https://www.youtube.com/channel/UCUk-zZQWMyVYCMF6D64jLzw?app=desktop)
 
 * [LaTeX_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks)
   * Quelques recettes LaTeX ([UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt))
