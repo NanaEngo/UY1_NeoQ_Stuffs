@@ -1,5 +1,9 @@
 # UY1_NeoQ2022 - Stuff and Tricks
 
+* [VQA_Chem](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/VQA_Chem)
+  * Cours théorique sur le calcul quantique, les éléments de chimie quantique et les algorithmes quantiques variationnels.([Calculs_quantiques_pour_la_chimie_quantique2302_compressed.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/VQA_Chem/Calculs_quantiques_pour_la_chimie_quantique2302_compressed.pdf))
+  * Divers notebooks (*.ipynb) pour les travaux pratiques.
+
 * [Stages](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Stages)
   * Objectifs et mini-projets des stages ([UY1_NeoQ2022.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/UY1_NeoQ_Stage2022.pdf))
 
@@ -21,7 +25,6 @@
   * Rudiments de la méthodologie de la Recherche ([UY1_NeoQ_Methodologie_de_RechercheV211213.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks/UY1_NeoQ_Beamer_Methodologie_de_RechercheV211213.pdf))
   * Principales composantes d'un projet de Recherche ([UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf))
   * Guidelines for Writing Research Proposals and Dissertations ([Dissertation Guide.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/))
-
 
 * [Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Atomic_Physics)
   * Cours UN et UMra mis à jour pour le renforcement des capacités ([Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)) 
