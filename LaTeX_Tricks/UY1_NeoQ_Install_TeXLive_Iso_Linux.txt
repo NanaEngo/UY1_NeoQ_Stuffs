@@ -50,7 +50,7 @@ if [ -d "/usr/local/texlive/2022/texmf-dist/doc/man" ] ; then
     fi
 #<<<<<<<<<<TeXlive<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-Sauvegarder et fermer les fichiers. 
+Sauvegarder et fermer les fichiers.
 
 5. Activer les changements
 $ source ~/.bashrc
@@ -59,7 +59,7 @@ $ source ~/.profile
 6. Verifier la prise en compte des changements
 $ echo $PATH
 
-7. Ajouter  
+7. Ajouter
 
 $ sudo gedit /etc/environment
 
@@ -71,7 +71,7 @@ Ajouter
 
 PATH="/usr/local/texlive/2022/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-8. Sauvegarder et fermer le fichier. 
+8. Sauvegarder et fermer le fichier.
 
 9. Activer les changements
 $ source /etc/environment
@@ -97,15 +97,15 @@ $ latex: /usr/local/texlive/2022/bin/x86_64-linux/latex
 12. S'il arrive que lors de la commande pour activer TL Manager
 $ tlmgr --gui
 
-14. Pour installer un package
-$ tlmgr install package
-
 affiche le message d'erreur " tlmgr: command not found", alors entrer
 
 $ sudo env PATH="$PATH" tlmgr --gui
 
 13. Pour liberer l'espace occupé par les fichiers qui s'accumulent dans le backup à la suite de diverses installations et mises à jour
 $ tlmgr backup --clean=0 --all
+
+14. Pour installer un package
+$ tlmgr install package
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,13 +142,13 @@ $ /usr/local/texlive/2022/bin/x86_64-linux/latex
 3.4. Continuer les configurations à sa convenance
 
 4. Configuration de LanguageTool
-4.1. Si comme moi vous avez une version de languagetool téléchargée et contenu dans le repertoire "LanguageTool5.x" par exemple, 
+4.1. Si comme moi vous avez une version de languagetool téléchargée et contenu dans le repertoire "LanguageTool5.x" par exemple,
 
 4.1.a. Copier ce repertoire dans "opt/"
 
 4.1.b. Indiquer le chemin où se trouve le fichier "languagetool-server.jar"
-Pour celà, aller à "Options/Configurer TeXstudio/Contrôle la langue/Chemin LT" et 
-insérer "opt/LanguageTool-5.x/languagetool-server.jar"  
+Pour celà, aller à "Options/Configurer TeXstudio/Contrôle la langue/Chemin LT" et
+insérer "opt/LanguageTool-5.x/languagetool-server.jar"
 
 4.1.c. Installer une distribution java, par exemple
 $ sudo apt install opengdk-18-jre -y
