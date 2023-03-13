@@ -1,7 +1,7 @@
 # UY1_NeoQ2023 - Stuff and Tricks
 
 * [VQA_Chem](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/VQA_Chem)
-  * Cours théorique sur le calcul quantique, les éléments de chimie quantique et les algorithmes quantiques variationnels.([Calculs_quantiques_pour_la_chimie_quantique2302_compressed.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/VQA_Chem/Calculs_quantiques_pour_la_chimie_quantique2302_compressed.pdf))
+  * Cours théorique sur le calcul quantique, les éléments de chimie quantique et les algorithmes quantiques variationnels.([Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/VQA_Chem/Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf))
   * Divers notebooks (*.ipynb) pour les travaux pratiques.
 
 * [Stages](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Stages)
