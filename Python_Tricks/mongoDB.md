@@ -1,58 +1,91 @@
 # MongoDB
 
-## Installation on Linux
 
-A complete documentataion can be found in [How to Install MongoDB on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)
+L’installation de MongoDB sur **Ubuntu 22.04** peut se faire en suivant les étapes ci-dessous :
 
-## Installing MongoDB
+---
 
-Import the GPG signed keys to the official MongoDB repository:
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-```
+### Étape 1 : Importer la clé publique MongoDB
+Commencez par ajouter la clé GPG pour vérifier les packages MongoDB.
 
-Create a list file for MongoDB and update the packages list:
-```
-sudo echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-sudo apt-get update
+```bash
+curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-6.0.gpg
 ```
 
-Install MongoDB package:
-```
-sudo apt-get install -y --allow-unauthenticated mongodb-org
+---
+
+### Étape 2 : Ajouter le dépôt officiel MongoDB
+Ajoutez le dépôt MongoDB au fichier des sources d'APT.
+
+```bash
+echo "deb [ arch=amd64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
 
-Create a configuration file named mongodb.service in the /etc/systemd/system directory using nano:
-```
-sudo nano /etc/systemd/system/mongodb.service
-```
-and paste the following:
-```
-[Unit]
-Description=High-performance, schema-free document-oriented database
-After=network.target
+---
 
-[Service]
-User=mongodb
-ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+### Étape 3 : Mettre à jour le cache APT
+Actualisez les index des dépôts pour inclure le dépôt MongoDB.
 
-[Install]
-WantedBy=multi-user.target
+```bash
+sudo apt update
 ```
 
-Set MongoDB to start automatically as system starts:
-```
-sudo systemctl enable mongodb
+---
+
+### Étape 4 : Installer MongoDB
+Installez MongoDB avec la commande suivante :
+
+```bash
+sudo apt install -y mongodb-org
 ```
 
-## Starting MongoDB
+---
 
-To start MongoDB service:
-```
-sudo systemctl start mongodb
+### Étape 5 : Vérifier la version installée
+Assurez-vous que MongoDB est correctement installé en vérifiant sa version :
+
+```bash
+mongod --version
 ```
 
-To view the status of MongoDB service:
+---
+
+### Étape 6 : Démarrer le service MongoDB
+Lancez MongoDB et configurez-le pour démarrer automatiquement au démarrage du système.
+
+```bash
+sudo systemctl start mongod
+sudo systemctl enable mongod
 ```
-sudo systemctl status mongodb
+
+---
+
+### Étape 7 : Vérifier le statut du service
+Assurez-vous que MongoDB est en cours d'exécution :
+
+```bash
+sudo systemctl status mongod
 ```
+
+---
+
+### Étape 8 : Tester MongoDB
+Lancez le client MongoDB pour tester son fonctionnement :
+
+```bash
+mongosh
+```
+
+Si tout fonctionne, vous serez dans la console interactive `mongosh`.
+
+---
+
+### Désinstallation (si nécessaire)
+Si vous devez désinstaller MongoDB, utilisez la commande suivante :
+
+```bash
+sudo apt purge mongodb-org*
+sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongodb
+```
+
