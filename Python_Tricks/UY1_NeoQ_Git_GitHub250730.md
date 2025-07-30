@@ -1,5 +1,20 @@
 # 🌱 Git basics for beginners: Your project time machine ⏳
 
+> **Table of Contents**  
+> 1. [🛠️ Step 1: Install git](#-step-1-install-git)  
+> 2. [👤 Step 2: Introduce yourself to git](#-step-2-introduce-yourself-to-git)  
+> 3. [🚀 Step 3: Start using git in your project](#-step-3-start-using-git-in-your-project)  
+> 4. [💾 Step 4: Save your work (Take a snapshot)](#-step-4-save-your-work-take-a-snapshot)  
+> 5. [📥 Step 5: Copy a project from the internet](#-step-5-copy-a-project-from-the-internet)  
+> 6. [☁️ Step 6: Upload to GitHub (Save online)](#️-step-6-upload-to-github-save-online)  
+> 7. [🔄 Step 7: Get latest changes (Teamwork!)](#-step-7-get-latest-changes-teamwork)  
+> 8. [🔍 Handy git cheat sheet](#-handy-git-cheat-sheet)  
+> 9. [🖱️ Prefer buttons over commands? Try GitHub desktop!](#️-prefer-buttons-over-commands-try-github-desktop)  
+> 10. [🌈 Beginner workflow summary](#-beginner-workflow-summary)  
+> 11. [🎉 Congratulations! You've got git superpowers! 💪](#-congratulations-youve-got-git-superpowers-)
+
+---
+
 > **Git is like a super-powered "Save Game" system for your projects!**  
 > It helps you:
 > - Save different versions of your work 📁
