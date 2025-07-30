@@ -19,12 +19,13 @@
 2. [Core Package Installation](#-core-package-installation)
 3. [JupyterLab Enhancements](#-jupyterlab-enhancements)
 4. [Environment Management](#-environment-management)
-5. [Jupyter Kernel Setup](#-jupyter-kernel-setup)
-6. [Working Directory Configuration](#-working-directory-configuration)
-7. [Desktop Integration](#-desktop-integration)
-8. [VS Code Setup](#-vs-code-setup)
-9. [AI Coding Assistants](#-ai-coding-assistants)
-10. [Troubleshooting](#-troubleshooting)
+5. [Updating Packages](#-updating-packages)
+6. [Jupyter Kernel Setup](#-jupyter-kernel-setup)
+7. [Working Directory Configuration](#-working-directory-configuration)
+8. [Desktop Integration](#-desktop-integration)
+9. [VS Code Setup](#-vs-code-setup)
+10. [AI Coding Assistants](#-ai-coding-assistants)
+11. [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -47,7 +48,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 - 📁 Choose installation location (default: `~/miniforge3`)
 - ✅ Initialize conda when prompted (say "yes")
 
-> 💡 **Why Initialize?** This adds Miniforge to your system PATH so you can use it from any terminal.
+> 💡 **Why initialize?** This adds Miniforge to your system PATH so you can use it from any terminal.
 
 ### Step 3: Initialize & update
 ```bash
@@ -58,15 +59,15 @@ source ~/.bashrc  # or source ~/.zshrc if using Zsh
 mamba update --all -y
 ```
 
-> 💡 **Pro Tip**: Add this to your `.bashrc`/`.zshrc` for auto-activation:
-> `echo "conda activate" >> ~/.bashrc`
-> 🔄 **Newbie Note**: This automatically activates the base environment when you open a terminal.
+> 💡 **Pro tip**: Add this to your `.bashrc`/`.zshrc` for auto-activation:
+> `echo "mamba activate" >> ~/.bashrc`
+> 🔄 **Newbie note**: This automatically activates the base environment when you open a terminal.
 
 ---
 
 ## 📦 Core package installation
 
-> 💡 **Newbie Explanation**: These are essential tools for data science. JupyterLab is like a web-based "Python workspace," while NumPy/Pandas are for data manipulation.
+> 💡 **Newbie explanation**: These are essential tools for data science. JupyterLab is like a web-based "Python workspace," while NumPy/Pandas are for data manipulation.
 
 ### Essential data science stack
 ```bash
@@ -99,7 +100,7 @@ mamba install -c conda-forge \
   -y
 ```
 
-> 💡 **Package Tips**:
+> 💡 **Package tips**:
 > - Start with essential packages first
 > - Add ML packages only if needed
 > - `-y` flag automatically confirms installation
@@ -128,16 +129,15 @@ jupyter labextension install @jupyterlab/toc
 jupyter lab build
 ```
 
-> 💡 **LaTeX Note**: For full document rendering (PDF export):
+> 💡 **LaTeX note**: For full document rendering (PDF export):
 > `sudo apt install texlive-full` (Debian/Ubuntu)
-> `sudo dnf install texlive-scheme-full` (Fedora)
 > 📝 **Why?** LaTeX is a document preparation system needed for professional PDF output.
 
 ---
 
 ## 🌱 Environment management
 
-> 💡 **Newbie Explanation**: Environments are like "separate workspaces" for different projects. This prevents package conflicts.
+> 💡 **Newbie explanation**: Environments are like "separate workspaces" for different projects. This prevents package conflicts.
 
 ### Create new environment
 ```bash
@@ -164,6 +164,69 @@ mamba create --clone base --name base-backup
 > - Use different environments for different projects
 > - Export environment.yml to share your setup
 > - Keep base environment minimal
+
+---
+
+## 🔄 Updating packages  <!-- NEW SECTION STARTS HERE -->
+
+> 💡 **Newbie explanation**: Regularly updating packages gives you bug fixes, security patches, and new features. Think of it like updating apps on your phone!
+
+### Update all packages in an environment
+```bash
+# First activate the environment
+mamba activate my-environment
+
+# Update all packages
+mamba update --all -y
+```
+
+### Update a specific package
+```bash
+mamba update package-name -y
+```
+> Example: `mamba update numpy -y`
+
+### Update to a specific package version
+```bash
+mamba install package-name=version -y
+```
+> Example: `mamba install pandas=2.1.0 -y`
+
+### Update mamba itself
+```bash
+# Make sure you're in base environment
+mamba activate base
+
+# Update mamba and conda
+mamba update mamba conda -y
+```
+
+### Best practices for updating
+1. **Update regularly**: Check for updates monthly
+2. **Create backups**: Clone environments before major updates
+   ```bash
+   mamba create --clone my-env --name my-env-backup
+   ```
+3. **Test after updating**: Verify your code still works
+4. **Pin critical packages**: For production, specify versions
+   ```yaml
+   # environment.yml
+   dependencies:
+   - python=3.12
+   - numpy=1.26.0
+   - pandas=2.1.0
+   ```
+
+### Checking for updates
+```bash
+# See available updates without installing
+mamba update --all --dry-run
+
+# List outdated packages
+mamba outdated
+```
+
+> ⚠️ **Warning**: Major updates (like Python version changes) might break code. Test thoroughly!
 
 ---
 
@@ -347,6 +410,7 @@ pip install jupyter_ai
 | **`mamba` not found** | `source ~/miniforge3/etc/profile.d/conda.sh` | Miniforge not loaded |
 | **Extensions not loading** | `jupyter lab clean && jupyter lab build` | Needs rebuild |
 | **VS Code not finding Python** | Check `python.defaultInterpreterPath` | Wrong path in settings |
+| **Package update conflicts** | `mamba update --all` or create new environment | Dependency issues |
 
 ### Useful diagnostics
 ```bash
@@ -355,6 +419,9 @@ mamba doctor
 
 # Shows package dependencies
 mamba repoquery depends numpy
+
+# List installed packages
+mamba list
 ```
 
 > 🔧 **Help tip**: Most issues can be solved by:
@@ -369,10 +436,10 @@ mamba repoquery depends numpy
 - [VS Code Python Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 - [JupyterLab Interface Guide](https://jupyterlab.readthedocs.io/en/stable/user/interface.html)
 - [Conda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
+- [Mamba Package Management](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html)
 
 > 🎓 **Learning path**:
 > 1. Start with basic Python in Jupyter
 > 2. Learn Pandas for data manipulation
 > 3. Explore Matplotlib/Seaborn for visualization
 > 4. Try scikit-learn for machine learning
-
