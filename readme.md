@@ -1,36 +1,76 @@
-# UY1_NeoQ2025 - Stuff and Tricks
+# UY1_NeoQ2025 – Stuff and Tricks
 
-* [VQA_Chem](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/VQA_Chem)
-  * Cours théorique sur le calcul quantique, les éléments de chimie quantique et les algorithmes quantiques variationnels.([Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/VQA_Chem/Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf))
-  * Divers notebooks (*.ipynb) pour les travaux pratiques.
+Bienvenue dans le dépôt collaboratif des Néo Quanticiens de l'Université de Yaoundé 1. Vous trouverez ici une collection organisée de documents, cours, notebooks, astuces et ressources utiles pour l'apprentissage et la pratique de la chimie et de la physique quantique, ainsi que des outils pour la recherche, la programmation et la rédaction scientifique.
 
-* [Stages](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Stages)
-  * Objectifs et mini-projets des stages
-   *  [Stage_M1_2025_Corine_Merveille](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Corine_Merveille.pdf)
-   *  [Stage_M1_2025_Lynsha_Emo](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Lynsha_Emo.pdf)
+## Table des matières
 
-* [Phyton_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Python_Tricks)
-  * Installer des packages python sur son compte colab de facon permanente ([UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md))
-  * Cours d'Introduction à la programmation python pour la biologie (bioformatique) de l'Université de Paris Cité (Aout 2022) ([Python Cours Complet 2022](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Python_Tricks/Python%20Cours%20Complet%20V2022.pdf))
-  * Trucs et astuces d'installation de la distribution miniconda/miniforge ([UY1_NeoQ_Python_Jupyter_Tricks2303.md](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_Python_Jupyter_Tricks2303.md))
-  * [Premiers pas vers la programmation Python](https://www.youtube.com/watch?v=nAyi6EbWwxU) sur la chaine YouTube du Groupe [UY1 Quantum](https://www.youtube.com/channel/UCUk-zZQWMyVYCMF6D64jLzw?app=desktop)
+- [VQA_Chem](#vqa_chem)
+- [Stages](#stages)
+- [Python_Tricks](#python_tricks)
+- [LaTeX_Tricks](#latex_tricks)
+- [TeXLive_Tricks](#texlive_tricks)
+- [Research_Tricks](#research_tricks)
+- [Atomic_Physics](#atomic_physics)
+- [Linux_Tricks](#linux_tricks)
 
-* [LaTeX_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks)
-  * Quelques recettes LaTeX ([UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt))
-  * Rudiments de la redaction en LaTeX ([UY1_NeoQ_Latex_et_ses_rudiments.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Latex_et_ses_rudiments.pdf))
+---
 
-* [TeXLive_Trick](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks)
-  * Comment installer TexLive sur Linux ([UY1_NeoQ_Install_TeXLive_Linux.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/UY1_NeoQ_Install_TeXLive_Linux.txt))
-  * Exemple de fichier **profile** à utiliser lors d'une installation en mode commande ([MyTL2022Linux.profile](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/MyTL2022Linux.profile.txt)) 
-  * Exemple de fichier de configuration de TexStudio ([MYLinuxTeXstudio220910.txsprofile](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/MYLinuxTeXstudio220910.txsprofile))
+## VQA_Chem
 
-* [Research_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks)
-  * Rudiments de la méthodologie de la Recherche ([UY1_NeoQ_Methodologie_de_RechercheV211213.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks/UY1_NeoQ_Beamer_Methodologie_de_RechercheV211213.pdf))
-  * Principales composantes d'un projet de Recherche ([UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf))
-  * Guidelines for Writing Research Proposals and Dissertations ([Dissertation Guide.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/))
+- Cours théorique sur le calcul quantique, les éléments de chimie quantique et les algorithmes quantiques variationnels.  
+  [Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/VQA_Chem/Calculs_quantiques_pour_la_chimie_quantiqueV230313.pdf)
+- Divers notebooks (*.ipynb) pour les travaux pratiques.
 
-* [Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Atomic_Physics)
-  * Cours UN et UMra mis à jour pour le renforcement des capacités ([Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)) 
+## Stages
 
-* [Linux_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Linux_Tricks)
-  * [Commandes de base de LINUX V2209](https://docs.google.com/document/d/1_m6KMBfJAMpmk-HUIWPnT6nt-koY4LJuLGYVyQ4f02g/edit)  
+- Objectifs et mini-projets des stages :
+  - [Stage_M1_2025_Corine_Merveille](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Corine_Merveille.pdf)
+  - [Stage_M1_2025_Lynsha_Emo](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Lynsha_Emo.pdf)
+
+## Python_Tricks
+
+- Installer des packages Python sur Colab de façon permanente :  
+  [UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md)
+- Cours d'introduction à la programmation Python pour la biologie (bioinformatique) :  
+  [Python Cours Complet 2022](https://github.com/NanaEngo/UY1_NeoQ_Scripts/blob/main/Python_Tricks/Python_Cours_Complet_2022.pdf)
+- Astuces pour l'installation de Miniconda/Miniforge :  
+  [UY1_NeoQ_Python_Jupyter_Tricks2303.md](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_Python_Jupyter_Tricks2303.md)
+- Premiers pas vers la programmation Python :  
+  [YouTube - UY1 Quantum](https://www.youtube.com/channel/UCUk-zZQWMyVYCMF6D64jLzw)
+
+## LaTeX_Tricks
+
+- Recettes LaTeX :  
+  [UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Qlq_Recettes_LaTeX220630.txt)
+- Rudiments de la rédaction en LaTeX :  
+  [UY1_NeoQ_Latex_et_ses_rudiments.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Latex_et_ses_rudiments.pdf)
+
+## TeXLive_Tricks
+
+- Installer TeXLive sur Linux :  
+  [UY1_NeoQ_Install_TeXLive_Linux.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/UY1_NeoQ_Install_TeXLive_Linux.txt)
+- Fichier profile pour installation en mode commande :  
+  [MyTL2022Linux.profile](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/MyTL2022Linux.profile)
+- Exemple de configuration TeXStudio :  
+  [MYLinuxTeXstudio220910.txsprofile](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/TeXLive_Tricks/MYLinuxTeXstudio220910.txsprofile)
+
+## Research_Tricks
+
+- Méthodologie de la recherche :  
+  [UY1_NeoQ_Methodologie_de_RechercheV211213.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Research_Tricks/UY1_NeoQ_Beamer_Methodologie_de_RechercheV211213.pdf)
+- Principales composantes d'un projet de recherche :  
+  [UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/UY1_NeoQ_Principales_composantes_projet_rechercheV220326.pdf)
+- Guide pour la rédaction de propositions et dissertations (EN) :  
+  [Dissertation Guide.pdf](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Dissertation_Guide.pdf)
+
+## Atomic_Physics
+
+- Cours UN et UMra mis à jour pour le renforcement des capacités :  
+  [Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)
+
+## Linux_Tricks
+
+- Commandes de base de Linux :  
+  [Commandes de base de LINUX V2209](https://docs.google.com/document/d/1_m6KMBfJAMpmk-HUIWPnT6nt-koY4LJuLGYVyQ4f02g/edit)
+
+---
