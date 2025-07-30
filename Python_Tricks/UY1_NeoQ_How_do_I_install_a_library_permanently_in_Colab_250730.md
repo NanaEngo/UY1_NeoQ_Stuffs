@@ -1,14 +1,10 @@
-Here is your improved guide, ready to be saved as **UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab_250730.md**:
-
----
-
-# How Do I Install a Library Permanently in Google Colab?
+# How do I install a library permanently in Google Colab?
 
 This guide explains how to install Python libraries in Google Colab so they persist across sessions (by using Google Drive), and includes tips for connecting Colab to a local Jupyter server.
 
 ---
 
-## Table of Contents
+## Table of contents
 
 1. [Installing a Library Permanently in Colab](#installing-a-library-permanently-in-colab)
 2. [Connecting Colab to a Local Jupyter Server (Advanced)](#connecting-colab-to-a-local-jupyter-server-advanced)
@@ -17,11 +13,11 @@ This guide explains how to install Python libraries in Google Colab so they pers
 
 ---
 
-## Installing a Library Permanently in Colab
+## Installing a library permanently in Colab
 
 Google Colab resets its environment every time you restart, so any installed library is lost. However, you can "permanently" install libraries by saving them to your Google Drive.
 
-### Step-by-Step Instructions
+### Step-by-step instructions
 
 #### 1. Mount Google Drive
 
@@ -31,7 +27,7 @@ drive.mount('/content/drive')
 ```
 > This command connects your Google Drive to Colab at `/content/drive`.
 
-#### 2. Set the Installation Path
+#### 2. Set the installation path
 
 Decide where you want to store your libraries in Drive. For example:
 
@@ -41,7 +37,7 @@ nb_path = '/content/drive/MyDrive/Colab Notebooks/MyModules'
 ```
 > Here, we’ll save libraries to a folder called `MyModules` in your Colab Notebooks.
 
-#### 3. Install the Library to Google Drive
+#### 3. Install the library to Google Drive
 
 Replace `jdc` with any library you want to install:
 
@@ -49,7 +45,7 @@ Replace `jdc` with any library you want to install:
 !pip install --target=$nb_path jdc
 ```
 
-#### 4. Add the Path to sys.path
+#### 4. Add the path to sys.path
 
 This step lets Python find your installed library:
 
@@ -58,7 +54,7 @@ if nb_path not in sys.path:
     sys.path.append(nb_path)
 ```
 
-#### 5. Import and Use Your Library
+#### 5. Import and use your library
 
 ```python
 import jdc
@@ -70,7 +66,7 @@ You only need to run step 3 (install) once per library, unless you want to upgra
 
 ---
 
-## Connecting Colab to a Local Jupyter Server (Advanced)
+## Connecting Colab to a local jupyter server (Advanced)
 
 Sometimes, you may want to run Colab notebooks on your own computer using your local resources.
 
@@ -79,14 +75,14 @@ Sometimes, you may want to run Colab notebooks on your own computer using your l
 - Jupyter is installed on your local machine.
 - You know your local machine’s IP address.
 
-### Step-by-Step
+### Step-by-step
 
-1. **Install Jupyter (if not already installed):**
+1. **Install jupyter (if not already installed):**
     ```bash
     pip3 install jupyterlab
     ```
 
-2. **Start Jupyter Notebook:**
+2. **Start jupyter notebook:**
     ```bash
     jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0
     ```
