@@ -116,6 +116,3 @@ Sometimes, you may want to run Colab notebooks on your own computer using your l
 UY1 Néo Quanticiens – Espace Documents, Trucs et Astuces
 
 ---
-
-You can now save this content under the filename:  
-**UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab_250730.md**
