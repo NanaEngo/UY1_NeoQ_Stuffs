@@ -4,6 +4,7 @@ Bienvenue dans le dépôt collaboratif des Néo Quanticiens de l'Université de 
 
 ## Table des matières
 - [Atomic_Physics](#atomic_physics)
+- [IA](#IA)
 - [LaTeX_Tricks](#latex_tricks)
 - [Linux_Tricks](#linux_tricks)
 - [Python_Tricks](#python_tricks)
@@ -19,6 +20,10 @@ Bienvenue dans le dépôt collaboratif des Néo Quanticiens de l'Université de 
 - Cours UN et UMra mis à jour pour le renforcement des capacités :
   [Atomic_Physics](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Atomic_Physics/PhysAtomiqV2209_Chapitres%201-4.pdf)
 
+## IA
+- Présentation de quelques outils IA gratuits:
+  [UY1_NeoQ_Quelques_Outils_IA_250730.md](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/IA/UY1_NeoQ_Quelques_Outils_IA_250730.md)
+  
 ## LaTeX_Tricks
 
 - Recettes LaTeX :
