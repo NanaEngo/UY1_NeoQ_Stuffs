@@ -1,61 +1,129 @@
-% Definition du chemin des repertoires particuliers, au même niveau que le repertoire contenant le fichier maitre (ce qui explique "../xxx/")
-\makeatletter\def\input@path{
-	{../Macros/}{../GraphicsQ/}
-}\makeatother%
-%
+% ======================================================
+% EXEMPLE PRÉAMBULE LaTeX - Bonnes pratiques 2025
+% ======================================================
 
-% Gestion de la page (un exemple)
-\usepackage[margin=2cm,includeheadfoot]{geometry}
+%%% Tous ces paquets (packages) ne sont pas utiles en même temps.
 
-% Pour la gestion des nombres et unités 
-\usepackage[detect-all=true,group-minimum-digits=4]{siunitx} 
+%%% Gestion des chemins d'accès
+\makeatletter
+\def\input@path{
+    {../Macros/}    % Répertoire des macros personnelles
+    {../GraphicsQ/} % Répertoire des images
+}
+\makeatother
 
-%pour la gestion des légendes des tableaux et figures
-\usepackage[bf,textfont={footnotesize,it}]{caption}
+%%% Configuration de base
+\documentclass[a4paper, 11pt]{article} % Classe de document
+\usepackage[utf8]{inputenc}            % Encodage des caractères
+\usepackage[T1]{fontenc}               % Encodage des polices
+\usepackage{lmodern}                   % Police vectorielle moderne
 
-%Gère les algorithmes
-\usepackage[section]{algorithm}   
+%%% Gestion de la langue française (modernisé)
+\usepackage[french]{babel}
+\frenchsetup{
+  StandardLayout = true,       % Typographie standard
+  PartNameFull = true,         % Noms complets des parties
+  ItemLabels = french,         % Étiquettes françaises
+  ThinSpaceInFrenchNumbers=true% Espace fine dans les nombres
+}
 
-% Codes semblables à fortran ou pascal ou C
-\usepackage{algpseudocode} 
+%%% Mise en page avancée
+\usepackage[%
+  margin=2cm,            % Marges
+  includeheadfoot,       % Inclure en-tête/pied dans la marge
+  headheight=15pt        % Hauteur minimale de l'en-tête
+]{geometry}
 
-%Ecrit Tableau dans caption
-\captionsetup[table]{name=Tableau} 
+%%% Gestion des paragraphes
+\usepackage{parskip}      % Espacement vertical entre paragraphes
+\setlength{\parindent}{15pt} % Indentation première ligne
+\usepackage{ragged2e}     % Justification améliorée
+\setlength{\RaggedRightRightskip}{0pt plus 2em} % Tolérance justification
 
-%Ecrit Algorithme dans caption
-\floatname{algorithm}{Algorithme} 
+%%% Mathématiques et sciences
+\usepackage{amsmath, amssymb, amsthm}  % Packages mathématiques de base
+\usepackage[%
+  detect-all,               % Adaptation automatique du contexte
+  group-minimum-digits=4,   % Séparation des milliers
+  per-mode=symbol,          % Unités avec slash
+  exponent-product=\cdot,   % Notation scientifique
+  inter-unit-product=\ensuremath{{}\cdot{}} % Séparateur d'unités
+]{siunitx}
 
-% Pour la gestion des appendices
-\usepackage[toc,page,title,titletoc,header]{appendix}
+%%% Gestion des algorithmes
+\usepackage[ruled,vlined]{algorithm2e} % Alternative plus moderne
+\SetAlFnt{small} % Taille de police
+\SetAlCapFnt{\small\itshape} % Police de légende
+\SetAlCapNameFnt{\small\bfseries} % Police du titre "Algorithme"
+\newcommand{\algorithmeautorefname}{Algorithme} % Compatibilité autoref
 
-% Indentation au début de chaque paragraphe
-\usepackage{identfirst} 
+%%% Graphiques et couleurs
+\usepackage{graphicx} % Inclusion d'images
+\usepackage[%
+  svgnames,   % Noms de couleurs SVG
+  table,       % Couleurs dans les tableaux
+  hyperref     % Compatibilité liens
+]{xcolor}
+\usepackage{booktabs} % Règles horizontales professionnelles
+\arrayrulecolor{SeaGreen!70!black} % Couleur des filets
+\renewcommand{\arraystretch}{1.3} % Espacement vertical dans les tableaux
 
-% Augmenter l'espace vertical entre paragraphes	
-\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex} 
+%%% Encadrement d'équations
+\usepackage[most]{tcolorbox} % Meilleure alternative à empheq
+\tcbset{
+    colback=LightYellow!10,   % Couleur de fond
+    colframe=DarkRed!70!black, % Couleur de bordure
+    sharp corners,             % Coins droits
+    boxrule=0.8pt,             % Épaisseur de bordure
+    left=3pt,                  % Marge intérieure gauche
+    right=3pt,
+    top=3pt,
+    bottom=3pt,
+}
 
-% Prise en compte du numéro de la section dans les différentes numérotations
+%%% Légendes et sous-légendes
+\usepackage[%
+  font=small,         % Taille de police
+  labelfont=bf,       % Police du label (gras)
+  textfont=it,        % Police du texte (italique)
+  justification=raggedright,
+  singlelinecheck=false
+]{caption}
+\captionsetup[table]{name=Tableau} % Personnalisation nom "Tableau"
+\captionsetup[figure]{skip=5pt}    % Espace après légende
+
+%%% Gestion des références croisées
+\usepackage[%
+  colorlinks=true,      % Liens colorés
+  linkcolor=MidnightBlue,
+  citecolor=ForestGreen,
+  urlcolor=DarkOrchid,
+  pdfencoding=auto,
+  psdextra,
+  bookmarksdepth=3
+]{hyperref}
+\usepackage{cleveref} % Références intelligentes
+\crefname{algorithm}{algorithme}{algorithmes}
+
+%%% Améliorations typographiques
+\usepackage{microtype}      % Optimisations typo subtiles
+\usepackage[autostyle]{csquotes} % Citations améliorées
+
+%%% Annexes
+\usepackage[%
+  toc,        % Ajout dans la table des matières
+  page,       % Page séparée
+  title,      % Titre "Annexes"
+  titletoc,   % Titre dans la TdM
+  header      % En-tête
+]{appendix}
+
+%%% Configuration des numérotations
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
+\numberwithin{algorithm}{section}
 
-% Ramener la typologie française à la typologie standard (anglo-saxone)
-\frenchbsetup{StandardLayout=true}
-
-% Alternance des couleurs dans tableau (à mettre avant les packages color et colortb
-\usepackage[svgnames,x11names,rgb,hyperref,table]{xcolor} 
-\usepackage{booktabs}
-\arrayrulecolor{green!50!black}\renewcommand{\arraystretch}{1.2}
-
-%Encadrer les equations en couleurs
-\usepackage{empheq}
-
-\newcommand{\tequation}[1]
-{\begin{equation}\tcbhighmath{#1}
-\end{equation}}
-
-\newcommand{\talign}[1]
-{\begin{empheq}[box=\tcbhighmath]{align}
-#1
-\end{empheq}}
-
+%%% Commandes personnelles pour équations
+\newcommand{\tequation}[1]{\begin{equation}\tcbhighmath{#1}\end{equation}}
+\newcommand{\talign}[1]{\begin{tcolorbox}[ams equation]\vspace{-1.2\baselineskip}#1\end{tcolorbox}}
