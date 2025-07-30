@@ -5,7 +5,9 @@
   * Divers notebooks (*.ipynb) pour les travaux pratiques.
 
 * [Stages](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Stages)
-  * Objectifs et mini-projets des stages ([UY1_NeoQ2022.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/UY1_NeoQ_Stage2022.pdf))
+  * Objectifs et mini-projets des stages
+   *  [Stage_M1_2025_Corine_Merveille](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Corine_Merveille.pdf)
+   *  [Stage_M1_2025_Lynsha_Emo](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/blob/main/Stages/Stage_M1_2025_Lynsha_Emo.pdf)
 
 * [Phyton_Tricks](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/Python_Tricks)
   * Installer des packages python sur son compte colab de facon permanente ([UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md](https://github.com/NanaEngo/UY1_NeoQ2022/blob/main/Python_Tricks/UY1_NeoQ_How_do_I_install_a_library_permanently_in_Colab.md))
