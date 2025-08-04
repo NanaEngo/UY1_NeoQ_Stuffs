@@ -29,7 +29,7 @@ Bienvenue dans le dépôt collaboratif des Néo Quanticiens de l'Université de 
 - Recettes LaTeX :
   [UY1_NeoQ_Qlq_Recettes_LaTeX250730.txt](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Qlq_Recettes_LaTeX250730.txt)
 - Rudiments de la rédaction en LaTeX :
-  [UY1_NeoQ_Latex_et_ses_rudiments.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Latex_et_ses_rudiments.pdf)
+  [UY1_NeoQ_Latex_et_ses_rudiments.pdf](https://github.com/NanaEngo/UY1_NeoQ_Stuffs/tree/main/LaTeX_Tricks/UY1_NeoQ_Latex_Rudiments250804.pdf)
 
 
 ## Linux_Tricks
