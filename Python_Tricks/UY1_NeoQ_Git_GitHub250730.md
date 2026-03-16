@@ -189,6 +189,132 @@ git pull origin main
 
 ---
 
+### Installation
+
+1. **Download**: Go to [desktop.github.com](https://desktop.github.com/)
+2. **Install**: Run the installer for your OS (Windows/macOS/Linux)
+3. **Sign in**: Use your GitHub account credentials
+
+---
+
+### Clone a Repository
+
+1. Click **File** → **Clone Repository**
+2. Choose from the list or paste a URL
+3. Select local path and click **Clone**
+
+> 📁 The repository will appear in your chosen folder.
+
+---
+
+### Make Changes & Commit
+
+1. **Edit files** in your preferred editor
+2. **Open GitHub Desktop** – changes appear automatically
+3. **Write a summary** (required) and description (optional)
+4. Click **Commit to main**
+
+> 📝 **Tip**: Stage specific lines by highlighting them before committing.
+
+---
+
+### Push to GitHub
+
+1. After committing, click **Push origin** at the top
+2. Your changes are now on GitHub!
+
+> ☁️ **Note**: Push regularly to backup your work.
+
+---
+
+### Create a New Repository
+
+1. Click **File** → **New Repository**
+2. Fill in:
+   - **Name**: Your project name
+   - **Description**: What it's about
+   - **Path**: Where to save it
+3. Check **Initialize with README** (recommended)
+4. Click **Create Repository**
+
+---
+
+### Publish to GitHub
+
+1. After creating locally, click **Publish repository**
+2. Choose a name and visibility (Public/Private)
+3. Click **Publish**
+
+> 🔒 **Private**: Only you can see it. **Public**: Everyone can see.
+
+---
+
+### Pull Latest Changes
+
+1. Click **Fetch origin** to check for updates
+2. Click **Pull** to download changes
+
+> 🔄 **Tip**: Pull before starting work each day!
+
+---
+
+### Create a Branch
+
+1. Click **Current Branch** → **New Branch**
+2. Name your branch (e.g., `feature/login-page`)
+3. Click **Create Branch**
+
+> 🌿 **Why branch?** Work on features without affecting main code.
+
+---
+
+### Merge a Branch
+
+1. Switch to `main` branch
+2. Click **Branch** → **Merge into current branch**
+3. Select the branch to merge
+4. Click **Merge**
+
+---
+
+### GitHub Desktop vs Command Line
+
+| Action | GitHub Desktop | Command Line |
+|--------|----------------|--------------|
+| Clone | Click button | `git clone <url>` |
+| Commit | Type & click | `git commit -m "msg"` |
+| Push | Click button | `git push` |
+| Pull | Click button | `git pull` |
+| Branch | Click menu | `git checkout -b <name>` |
+| Merge | Click menu | `git merge <branch>` |
+
+---
+
+### Keyboard Shortcuts
+
+| Action | Windows | macOS |
+|--------|---------|-------|
+| Commit | `Ctrl+Enter` | `Cmd+Enter` |
+| Push/Pull | `Ctrl+T` | `Cmd+T` |
+| Search | `Ctrl+F` | `Cmd+F` |
+
+---
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| **Can't sign in** | Check internet, verify credentials |
+| **Changes not showing** | Refresh: View → Reload |
+| **Push failed** | Pull first, resolve conflicts |
+| **Wrong account** | File → Options → Accounts |
+
+---
+
+> 💡 **Pro Tip**: Use GitHub Desktop for daily work, learn command line for advanced features!
+
+---
+
 ## 🌈 Workflow Summary
 
 ### Daily workflow
