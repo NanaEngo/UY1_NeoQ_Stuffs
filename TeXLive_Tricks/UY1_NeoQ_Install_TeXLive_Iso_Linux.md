@@ -1,176 +1,340 @@
-# Installation TexLive 2022 iso
+# Installation de TeXLive 2022 (ISO) sur Linux
 
-1. Mounter l'iso (faites un clic droit et faites le choix approprié)
+Guide complet pour installer TeXLive 2022 à partir d'une image ISO sur Linux.
 
-2. Ouvrir le terminal dans le repertoire où se trouve le fichier iso (texlive2022-20220321.iso) et installer perl-tk (nécessaire pour l'interface graphique de l'installateur)
-> sudo apt install perl-tk
-      
-      * Créer le répertoire d'installation et modifier le propriétaire de ce dernier (ici taamangtchu devient proprietaire)
+---
 
-> sudo mkdir -p /usr/local/texlive/2022 && sudo chown -R taamangtchu /usr/local/texlive
+## Table des matières
 
-## Installation en mode graphique
-1. S'assurer que tk est installée 
-> sudo apt install tk
+1. [Préparation](#préparation)
+2. [Installation graphique](#installation-graphique)
+3. [Installation en ligne de commande](#installation-en-ligne-de-commande)
+4. [Configuration](#configuration)
+5. [Vérification et gestion](#vérification-et-gestion)
+6. [Installation de TeXstudio](#installation-de-texstudio)
+7. [Configuration de LanguageTool](#configuration-de-languagetool)
+8. [Désinstallation](#désinstallation)
 
-> ./install-tl -gui
+---
 
-2. Configurer les packages à installer et lancer l'installation
+## Préparation
 
-## Installation en mode non graphique 
-En mode rapide, utiliser un fichier profile
-> ./install-tl --profile /CheminFichierProfile
+### 1. Monter l'ISO
 
-Example
-> ./install-tl --profile /media/nesg/NESG8GO/TEXLIVE/MyTL2022Linux.profile
+Faites un clic droit sur le fichier ISO et choisissez l'option de montage, ou utilisez :
+
+```bash
+sudo mount -o loop texlive2022-20220321.iso /mnt
+```
+
+### 2. Ouvrir le terminal dans le répertoire contenant le fichier ISO
+
+```bash
+cd /chemin/vers/répertoire/contenant/iso
+```
+
+### 3. Installer perl-tk (nécessaire pour l'interface graphique)
+
+```bash
+sudo apt install perl-tk
+```
+
+### 4. Créer le répertoire d'installation
+
+```bash
+sudo mkdir -p /usr/local/texlive/2022 && sudo chown -R $USER /usr/local/texlive
+```
+
+> 💡 Remplacez `$USER` par votre nom d'utilisateur si nécessaire.
+
+---
+
+## Installation graphique
+
+### 1. Vérifier que tk est installée
+
+```bash
+sudo apt install tk
+```
+
+### 2. Lancer l'installateur
+
+```bash
+./install-tl -gui
+```
+
+### 3. Configurer et installer
+
+- Sélectionnez les packages à installer
+- Lancez l'installation
+
+---
+
+## Installation en ligne de commande
+
+Pour une installation rapide, utilisez un fichier de profil :
+
+```bash
+./install-tl --profile /chemin/vers/fichier.profile
+```
+
+**Exemple :**
+
+```bash
+./install-tl --profile /media/nesg/NESG8GO/TEXLIVE/MyTL2022Linux.profile
+```
+
+---
 
 ## Configuration
-1. Configurer la variable PATH
-> gedit  ~/.bashrc
 
-et ajouter
+### 1. Configurer la variable PATH
+
+#### Éditer `~/.bashrc`
+
 ```bash
-#>>>>>>>TexLive 2022>>>>>
-PATH=/usr/local/texlive/2022/bin/x86_64-linux:>PATH; export PATH
-MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:>MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:>INFOPATH; export INFOPATH
-# <<<<<<TexLive 2022 <<<<<<<<
+gedit ~/.bashrc
 ```
 
-> gedit  ~/.profile
+Ajoutez à la fin du fichier :
 
-et ajouter
 ```bash
-# >>>>>>>>>>>TeXlive>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# >>>>>>> TexLive 2022 >>>>>>>
+PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH; export PATH
+MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+# <<<<<< TexLive 2022 <<<<<<<<
+```
+
+#### Éditer `~/.profile`
+
+```bash
+gedit ~/.profile
+```
+
+Ajoutez :
+
+```bash
+# >>>>>>>> TeXlive >>>>>>>>
 if [ -d "/usr/local/texlive/2022/bin/x86_64-linux" ] ; then
-    PATH=">HOME/usr/local/texlive/2022/bin/x86_64-linux:>PATH"
-    fi
+    PATH="$HOME/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+fi
 if [ -d "/usr/local/texlive/2022/texmf-dist/doc/man" ] ; then
-    MANPATH="/usr/local/texlive/2022/texmf-dist/doc/man:>MANPATH"
-    fi
- if [ -d "/usr/local/texlive/2022/texmf-dist/doc/info" ] ; then
-    INFOPATH="/usr/local/texlive/2022/texmf-dist/doc/info:>INFOPATH"
-    fi
-#<<<<<<<<<<TeXlive<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    MANPATH="/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH"
+fi
+if [ -d "/usr/local/texlive/2022/texmf-dist/doc/info" ] ; then
+    INFOPATH="/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH"
+fi
+# <<<<<<<< TeXlive <<<<<<<<
 ```
-Sauvegarder et fermer les fichiers.
 
-2. Activer les changements
-> source ~/.bashrc
-> source ~/.profile
+Sauvegardez et fermez les fichiers.
 
-3. Verifier la prise en compte des changements
-> echo >PATH
+### 2. Activer les changements
 
-4. Editer `/etc/environment`
-
-> sudo gedit /etc/environment
-
-et ajouter
 ```bash
-/usr/local/texlive/2022/bin/x86_64-linux:
+source ~/.bashrc
+source ~/.profile
 ```
 
-Le contenu final du fichier devrait donc ressembler à cela :
+### 3. Vérifier la prise en compte des changements
+
+```bash
+echo $PATH
+```
+
+### 4. Éditer `/etc/environment`
+
+```bash
+sudo gedit /etc/environment
+```
+
+Ajoutez le chemin de TeXLive au début de `PATH` :
+
 ```bash
 PATH="/usr/local/texlive/2022/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 ```
-5. Sauvegarder et fermer le fichier.
 
-7. Activer les changements
-> source /etc/environment
+Sauvegardez et fermez le fichier.
 
-8.  Démonter l'iso en utilisant le clic droit
+### 5. Activer les changements
 
-## Faire en sorte que Ubuntu sache que texlive est installé
+```bash
+source /etc/environment
+```
 
-> sudo apt install equivs --no-install-recommends freeglut3
+### 6. Démonter l'ISO
 
-> wget -O debian-equivs-2022-ex.txt https://www.tug.org/texlive/files/debian-equivs-2022-ex.txt
+Utilisez le clic droit pour démonter, ou :
 
-> equivs-build debian-equivs-2022-ex.txt
+```bash
+sudo umount /mnt
+```
 
-> sudo dpkg -i texlive-local_2022.99999999-1_all.deb && sudo apt install -f
+---
 
-* Vérifier la version de texlive installée
-> tex --version
+## Vérification et gestion
 
-ou
+### 1. Faire reconnaître TeXLive par Ubuntu
 
-> latex --version
+```bash
+sudo apt install equivs --no-install-recommends freeglut3
+wget -O debian-equivs-2022-ex.txt https://www.tug.org/texlive/files/debian-equivs-2022-ex.txt
+equivs-build debian-equivs-2022-ex.txt
+sudo dpkg -i texlive-local_2022.99999999-1_all.deb && sudo apt install -f
+```
 
-ou
-> whereis latex
+### 2. Vérifier la version installée
 
-et vous aurez
-> latex: /usr/local/texlive/2022/bin/x86_64-linux/latex
+```bash
+tex --version
+# ou
+latex --version
+# ou
+whereis latex
+```
 
-* S'il arrive que lors de la commande pour activer TL Manager
-> tlmgr --gui
+Résultat attendu :
 
-affiche le message d'erreur " tlmgr: command not found", alors entrer
+```
+latex: /usr/local/texlive/2022/bin/x86_64-linux/latex
+```
 
-> sudo env PATH=">PATH" tlmgr --gui
+### 3. Lancer TeX Live Manager (TL Manager)
 
-* Pour liberer l'espace occupé par les fichiers qui s'accumulent dans le backup à la suite de diverses installations et mises à jour
-> tlmgr backup --clean=0 --all
+Si `tlmgr --gui` affiche `tlmgr: command not found`, utilisez :
 
-* Pour installer un package
-> tlmgr install package
+```bash
+sudo env PATH="$PATH" tlmgr --gui
+```
 
+### 4. Nettoyer l'espace de backup
 
-## Désintallation texlive2022 iso
+Pour libérer l'espace occupé par les fichiers de backup :
 
-> sudo rm -rf /usr/local/texlive/* && sudo rm -rf /usr/local/share/texmf && rm -rf ~/.texlive*
+```bash
+tlmgr backup --clean=0 --all
+```
 
+### 5. Installer un package
 
-## Intallation et configuration de TeXstudio
+```bash
+tlmgr install <nom_du_package>
+```
 
-1. Installation online
-> sudo apt install texstudio
+---
 
-2. Installation par un fichier deb local
-   * Ouvrir le terminal dans le repertoire contenant le fichier deb
+## Désinstallation de TeXLive 2022 (ISO)
 
-   * Installer en activant les dépendances
-   > sudo dpkg -i texstudioxxxxx.deb -y && sudo apt install -f -y && sudo dpkg -i texstudioxxxxx.deb -y
+```bash
+sudo rm -rf /usr/local/texlive/*
+sudo rm -rf /usr/local/share/texmf
+rm -rf ~/.texlive*
+```
 
-3. Configurer texstudio
-* Indiquer le chemin où se trouve les fichiers bin de texlive. Pour cela entrer dans le terminal
+---
 
-> which latex
+## Installation et configuration de TeXstudio
 
-On obtient par exemple
-> /usr/local/texlive/2022/bin/x86_64-linux/latex
+### 1. Installation en ligne (via apt)
 
-* Demarrer TeXstudio
+```bash
+sudo apt install texstudio
+```
 
-* Copier la sortie de "which latex", i.e. "/usr/local/texlive/2022/bin/x86_64-linux/latex" et inserer dans
-`Options/Configurer TeXstudio/Production/Commandes (>PATH)`
+### 2. Installation depuis un fichier `.deb` local
 
-* Continuer les configurations à sa convenance
+```bash
+# Ouvrir le terminal dans le répertoire contenant le fichier .deb
+sudo dpkg -i texstudioxxxxx.deb -y && sudo apt install -f -y && sudo dpkg -i texstudioxxxxx.deb -y
+```
+
+### 3. Configurer TeXstudio
+
+1. Trouver le chemin des binaires TeXLive :
+
+   ```bash
+   which latex
+   ```
+
+   Exemple de sortie :
+
+   ```
+   /usr/local/texlive/2022/bin/x86_64-linux/latex
+   ```
+
+2. Démarrer TeXstudio
+
+3. Aller dans `Options > Configurer TeXstudio > Commandes`
+
+4. Coller le chemin obtenu (sans le nom de la commande) dans le champ PATH :
+
+   ```
+   /usr/local/texlive/2022/bin/x86_64-linux/
+   ```
+
+5. Continuer la configuration selon vos préférences
+
+---
 
 ## Configuration de LanguageTool
 
-1. Si comme moi vous avez une version de languagetool téléchargée et contenu dans le repertoire "LanguageTool5.x" par exemple,
+### Option 1 : Installation locale
 
-  * Copier ce repertoire dans `opt/`
+1. Copiez le répertoire `LanguageTool-5.x` dans `/opt/` :
 
-  * Indiquer le chemin où se trouve le fichier "languagetool-server.jar"
-  Pour celà, aller à "Options/Configurer TeXstudio/Contrôle la langue/Chemin LT" et insérer `opt/LanguageTool-5.x/languagetool-server.jar`.
+   ```bash
+   sudo cp -r ~/LanguageTool-5.x /opt/
+   ```
 
-  * Installer une distribution java, par exemple
-  > sudo apt install opengdk-18-jre -y
+2. Dans TeXstudio, allez dans :
 
-2. Si vous devez faire plutôt une installation online, télécharger l'application en tapant
-  > sudo snap install languagetool
-    * Reprendre les procédures ci-dessus
+   `Options > Configurer TeXstudio > Contrôle de la langue > Chemin LT`
 
-3. Tester son installation de Latex dans TeXstudio
-Cliquer "Aide/Verifier l'installation LaTeX"
-Si tout va bien, et fichier "rapport-systeme.txt" sera créer et vous verrez "Processus terminé normalement"
+   Indiquez le chemin :
 
-4. Tester son installation de LanguageTool dans TeXstudio
-Cliquer "Aide/Verifier LanguageTool"
-Si tout va bien, vous verrez dans le fichier "Rapport LT.txt" et vous verrez "Processus terminé normalement"
+   ```
+   /opt/LanguageTool-5.x/languagetool-server.jar
+   ```
 
+3. Installez une distribution Java :
+
+   ```bash
+   sudo apt install openjdk-18-jre -y
+   ```
+
+### Option 2 : Installation en ligne (Snap)
+
+```bash
+sudo snap install languagetool
+```
+
+Reprenez ensuite les procédures ci-dessus pour indiquer le chemin.
+
+---
+
+## Vérification des installations
+
+### 1. Vérifier l'installation LaTeX dans TeXstudio
+
+Dans TeXstudio : `Aide > Vérifier l'installation LaTeX`
+
+Si tout va bien, un fichier `rapport-systeme.txt` sera créé avec le message :
+
+> **Processus terminé normalement**
+
+### 2. Vérifier l'installation de LanguageTool dans TeXstudio
+
+Dans TeXstudio : `Aide > Vérifier LanguageTool`
+
+Si tout va bien, le fichier `Rapport LT.txt` affichera :
+
+> **Processus terminé normalement**
+
+---
+
+## Ressources utiles
+
+- [TeXLive Official Site](https://www.tug.org/texlive/)
+- [TeXstudio Official Site](https://www.texstudio.org/)
+- [LanguageTool Official Site](https://languagetool.org/)

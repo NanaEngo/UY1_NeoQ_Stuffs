@@ -1,0 +1,230 @@
+# =============================================================================
+# UY1_NeoQ_Stuffs - .gitignore
+# A comprehensive .gitignore for LaTeX, Python, and general development
+# =============================================================================
+
+# =============================================================================
+# LaTeX
+# =============================================================================
+# Auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.fdb_latexmk
+*.frg
+*.fob
+*.out
+*.toc
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.loa
+*.nav
+*.snm
+*.vrb
+*.synctex.gz
+*.synctex(busy)
+*.dvi
+*.xdv
+*.pdfsync
+
+# LaTeX build outputs
+*.pdf
+!*.pdf  # Keep PDFs that are manually added (courses, papers)
+
+# Temporary files
+*~
+\#*\#
+._*
+
+# Editor directories
+.idea/
+.vscode/
+.qodo/
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# Python
+# =============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# =============================================================================
+# IDE & Editors
+# =============================================================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# Operating System
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# =============================================================================
+# Documents & Office
+# =============================================================================
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Lock files
+*.lock
+*.lck
+
+# =============================================================================
+# Git
+# =============================================================================
+.gitignore
+!.gitignore
+
+# =============================================================================
+# Project Specific
+# =============================================================================
+# Local configuration files
+*.local
+*.local.*
+config.local.*
+
+# Sensitive information
+*.key
+*.pem
+*.crt
+secrets/
+.env.local
+.env.*.local
+
+# Backup files
+*.backup
+*.bkp
+
+# =============================================================================
+# End of .gitignore
+# =============================================================================
